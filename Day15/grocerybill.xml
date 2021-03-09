@@ -1,0 +1,22 @@
+<items>
+<item>
+  <sno>1</sno>
+  <itemname>rice</itemname>
+  <quantity>2</quantity>
+  <unit>kg</unit>>
+  <price>500</price>>
+</item>
+<item>
+  <sno>2</sno>
+  <itemname>sugar</itemname>
+  <quantity>2</quantity>
+  <unit>kg</unit>>
+  <price>100</price>>
+</item><item>
+  <sno>3</sno>
+  <itemname>oil</itemname>
+  <quantity>1</quantity>
+  <unit>l</unit>>
+  <price>450</price>>
+</item>
+</items>
