@@ -10,7 +10,7 @@ public class JDBCProg2 {
 
 	public static void main(String[] args) throws Exception {
 		Class.forName("com.mysql.cj.jdbc.Driver");//register the driver
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","Imser1301*");//establish a connection
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","root");//establish a connection
 Statement st= con.createStatement();
 
 String sql="insert into users values(3,'resmi','supergal',0)" ;
