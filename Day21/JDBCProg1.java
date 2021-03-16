@@ -11,7 +11,7 @@ public class JDBCProg1 {
 		// TODO Auto-generated method stub
 		
 Class.forName("com.mysql.cj.jdbc.Driver");//register the driver
-Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","Imser1301*");//establish a connection
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","root");//establish a connection
 System.out.println(con);
 DatabaseMetaData dbmd=(DatabaseMetaData) con.getMetaData();
 System.out.println(dbmd.getDatabaseProductName());
