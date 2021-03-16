@@ -10,7 +10,7 @@ public class JDBCProg5 {
 
 	public static void main(String[] args)throws Exception {
 		Class.forName("com.mysql.cj.jdbc.Driver");//register the driver
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","Imser1301*");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","root");
 		CallableStatement cs=con.prepareCall("{call proc3(?,?)}");
 		int uid=4;
 		cs.setInt(1, uid);
