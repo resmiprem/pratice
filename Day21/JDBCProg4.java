@@ -13,7 +13,7 @@ public class JDBCProg4 {
 	public static void main(String[] args) throws Exception{
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");//register the driver
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","Imser1301*");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","root");
 		
 	String	sql="select * from users where userid=? and username=?";
 	PreparedStatement st= con.prepareStatement(sql);
