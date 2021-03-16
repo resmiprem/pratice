@@ -8,7 +8,7 @@ public class TransactionDemo {
 	public static void main(String[] args)throws Exception {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		//step 2 - Establish a connection
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","Imser1301*");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","root");
 		
 		System.out.println(con);
 		
