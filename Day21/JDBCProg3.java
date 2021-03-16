@@ -11,7 +11,7 @@ public class JDBCProg3 {
 	public static void main(String[] args)throws Exception {
 		// TODO Auto-generated method stub
 		Class.forName("com.mysql.cj.jdbc.Driver");//register the driver
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","Imser1301*");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ey","root","root");
 		Statement st= con.createStatement();
 	String	sql="select * from users";
 		ResultSet rs=st.executeQuery(sql); 
