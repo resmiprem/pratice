@@ -14,7 +14,7 @@
                       <arg value="/opt/IBM/oms/devtoolkit_docker/runtime/devtoolkit/devtoolkit_extensions.xml"/>
                      <arg value="importfromproject"/>
                      <arg value="-Dprojectdir"/>
-                     <arg value="/home/omsuser/Documents/test_ant/oms-practice-team/local-code"/>
+                     <arg value="${WORKSPACE}/local-code"/>
                 </exec>
        </target>
 
