@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+  Licensed Materials - Property of IBM
+  IBM Sterling Order Management (5725-D10), IBM Order Management (5737-D18)
+  (C) Copyright IBM Corp. 2016,2018  All Rights Reserved.
+  US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<project name="Build and Deploy" default ="build" basedir=".">
+
+  <target name="build">
+                <exec executable="sudo" failonerror="true">
+                     <arg value="/opt/IBM/oms/devtoolkit_docker/runtime/bin/sci_ant.sh" />
+                     <arg value="-f"/>
+                      <arg value="/opt/IBM/oms/devtoolkit_docker/runtime/devtoolkit/devtoolkit_extensions.xml"/>
+                     <arg value="importfromproject"/>
+                     <arg value="-Dprojectdir"/>
+                     <arg value="/home/omsuser/Documents/test_ant/oms-practice-team"/>
+                </exec>
+       </target>
+
+<!--macrodef name = "git">
+    <attribute name = "command" />
+    <attribute name = "dir" default = "" />
+    <element name = "args" optional = "true" />
+    <sequential>
+        <echo message = "git @{command}" />
+        <exec executable = "git" dir = "@{dir}">
+            <arg value = "@{command}" />
+            <args/>
+        </exec>
+    </sequential>
+</macrodef>
+
+    <target name ="pull">
+           <git command = "pull" dir="/home/omsuser/Documents/test" >
+               <args>
+                       <arg value = "https://Resmi_Premkumar@bitbucket.org/ztechus/oms-practice-team.git" />
+                       <arg value = "feature/Jenkins-Automation-Test" />
+               </args>
+             </git>
+             <antcall target="build"/>
+    </target>
+ 
+     <target name="build">
+                <exec executable="sudo" failonerror="true">
+                     <arg value="/opt/IBM/oms/devtoolkit_docker/runtime/bin/sci_ant.sh" />
+                     <arg value="-f"/>
+                      <arg value="/opt/IBM/oms/devtoolkit_docker/runtime/devtoolkit/devtoolkit_extensions.xml"/>
+                     <arg value="importfromproject"/>
+                     <arg value="-Dprojectdir"/>
+                     <arg value="/home/omsuser/Documents/test/local-code"/>
+                </exec>
+               <antcall target="deploy"/>
+       </target>
+
+      <target name="deploy">
+                <exec executable="/opt/IBM/oms/devtoolkit_docker/compose/om-compose.sh" failonerror="true">
+                     <arg value="update-extn"/>
+                     <arg value="/opt/IBM/oms/devtoolkit_docker/extensions.jar"/>
+                </exec>
+       </target-->
+</project>
